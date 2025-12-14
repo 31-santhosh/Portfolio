@@ -1,0 +1,1238 @@
+:root {
+  --text-main: #ffffff;
+  --text-muted: rgba(255,255,255,0.75);
+  --card-text: #ffffff;
+}
+
+body.light {
+  --text-main: #020617;
+  --text-muted: #475569;
+  --card-text: #020617;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-main);
+
+  background:
+    radial-gradient(circle at top left, rgba(223, 232, 235, 0.25), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(14,165,233,.2), transparent 45%),
+    linear-gradient(135deg, #020617, #020617);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+
+.navbar {
+  background: rgba(2,6,23,.6);
+  backdrop-filter: blur(14px);
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* OLD NAV BUTTONS */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1e293b, #020617);
+  border: 1px solid rgba(56,189,248,0.4);
+  margin-left: 10px;
+}
+
+/* OLD WELCOME BUTTON */
+.welcome-btn {
+  padding: 10px 30px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg,#ec4899,#8b5cf6,#22d3ee);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0;
+}
+
+/* SECTIONS */
+.section {
+  background: rgba(15,23,42,.6);
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+/* FEATURE CARDS */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.06);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* OLD SOCIAL BUTTONS */
+.social-squircle {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.squircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.squircle.github {
+  background: linear-gradient(135deg,#374151,#020617);
+}
+
+.squircle.linkedin {
+  background: linear-gradient(135deg,#2563eb,#1e40af);
+}
+
+.squircle.gmail {
+  background: linear-gradient(135deg,#ea4335,#c5221f);
+}
+
+.footer {
+  text-align: center;
+  margin: 40px 0;
+}
+/* ======================
+   SQUIRCLE SOCIAL BUTTONS
+====================== */
+.social-squircle {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.squircle {
+  width: 56px;
+  height: 56px;
+  clip-path: url(#squircleClip);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.squircle svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* GitHub */
+.squircle.github {
+  background: linear-gradient(135deg, #374151, #020617);
+  border: 1px solid #4b5563;
+}
+
+/* LinkedIn */
+.squircle.linkedin {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border: 1px solid #3b82f6;
+}
+
+.squircle:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+/* ======================
+   AWS CYBER BUTTON
+====================== */
+.cert-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cyber-btn {
+  color: #00f3ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 28px;
+  position: relative;
+}
+
+.cyber-btn::before,
+.cyber-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #00f3ff;
+  transition: 0.3s;
+}
+
+.cyber-btn::before { top: 0; left: 0; }
+.cyber-btn::after { bottom: 0; right: 0; }
+
+.cyber-btn:hover::before,
+.cyber-btn:hover::after {
+  width: 100%;
+}
+/* NAV BUTTONS – OLD SIZE, OLD STYLE */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-pill {
+  padding: 8px 18px;              /* 👈 old nav size */
+  border-radius: 999px;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #ec4899,
+    #8b5cf6,
+    #22d3ee
+  );
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.5);
+}
+/* =========================
+   WELCOME BUTTON (StealthWorm)
+========================= */
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+
+  background-image:
+    linear-gradient(#020617, #020617),
+    linear-gradient(
+      137.48deg,
+      #38bdf8 10%,
+      #8b5cf6 45%,
+      #22d3ee 67%,
+      #2563eb 87%
+    );
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* keep welcome button above navbar blur */
+.welcome-hero {
+  z-index: 5;
+}
+
+/* STARS */
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(139, 92, 246, 0.7);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+}
+
+#stars {
+  position: relative;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::before,
+#stars::after {
+  content: "";
+  position: absolute;
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  width: 100%;
+  height: 100%;
+}
+
+#stars::before {
+  animation: animStar 60s linear infinite;
+  opacity: 0.5;
+}
+
+#stars::after {
+  animation: animStarRotate 90s linear infinite;
+}
+
+/* ANIMATIONS */
+@keyframes animStar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-135rem); }
+}
+
+@keyframes animStarRotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
+
+@keyframes gradient_301 {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse_3011 {
+  0% { transform: scale(0.75); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0.75); }
+}
+.toggle-cont {
+  --primary: #54a8fc;
+  --light: #d9d9d9;
+  --dark: #121212;
+  --gray: #414344;
+
+  position: relative;
+  width: 70px;
+  height: 32px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  border-radius: 999px;
+  border: 1px solid #555;
+  position: relative;
+  transition: 0.3s;
+}
+
+.cont-icon {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(circle at top, #666, #414344);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  box-shadow: inset 0 -2px 4px var(--primary);
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+/* CHECKED STATE */
+.toggle-input:checked + .toggle-label {
+  background: radial-gradient(circle at top, #1e90ff, #020617);
+}
+
+.toggle-input:checked + .toggle-label .cont-icon {
+  transform: translateX(36px) rotate(-180deg);
+  background: radial-gradient(circle at top, #54a8fc, #045ab1);
+}
+body.light {
+  --text-main: #020617;
+  --text-muted: #475569;
+  --card-text: #020617;
+
+  background: #f8fafc;
+  color: var(--text-main);
+}
+
+
+body.light .navbar,
+body.light .section {
+  background: rgba(179, 221, 245, 0.9);
+}
+.toggle-cont {
+  --primary: #7bc8e4;
+  position: relative;
+  width: 70px;
+  height: 32px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.9)
+  );
+  border: 1px solid rgba(255,255,255,.3);
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Light mode background */
+body.light .toggle-label {
+  background: linear-gradient(
+    to bottom,
+    #d31986,
+    #1945d6
+  );
+  border-color: #94a3b8;
+}
+
+.cont-icon {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, #666, #414344);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/* Light mode knob */
+body.light .cont-icon {
+  background: radial-gradient(circle at top, #000e1f, #2563eb);
+}
+
+.toggle-input:checked + .toggle-label .cont-icon {
+  transform: translateX(36px) rotate(-180deg);
+}
+/* =========================
+   HOVER TRACKER CARD EFFECT
+   (SIZE SAFE VERSION)
+========================= */
+
+.hover-track {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+/* gradient overlay */
+.hover-track::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(236,72,153,0.8),
+    rgba(139,92,246,0.8),
+    rgba(34,211,238,0.8)
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+/* soft glow */
+.hover-track::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    circle at var(--x,50%) var(--y,50%),
+    rgba(139,92,246,0.45),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+/* content stays above */
+.hover-track > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* hover effects */
+.hover-track:hover {
+  transform: translateY(-6px);
+}
+
+.hover-track:hover::before,
+.hover-track:hover::after {
+  opacity: 1;
+}
+
+/* =========================
+   LIGHT MODE SUPPORT
+========================= */
+
+body.light .hover-track::before {
+  background: linear-gradient(
+    120deg,
+    rgba(99,102,241,0.85),
+    rgba(56,189,248,0.85),
+    rgba(34,211,238,0.85)
+  );
+}
+
+body.light .hover-track::after {
+  background: radial-gradient(
+    circle at var(--x,50%) var(--y,50%),
+    rgba(59,130,246,0.35),
+    transparent 60%
+  );
+}
+/* =========================
+   NAV HOME – ANIMATED BUTTON
+========================= */
+
+.nav-home-btn {
+  position: relative;
+  display: inline-block;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #fff;
+
+  width: 9em;
+  height: 2.8em;
+  line-height: 2.8em;
+  text-align: center;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    90deg,
+    #03a9f4,
+    #f441a5,
+    #ffeb3b,
+    #03a9f4
+  );
+  background-size: 300%;
+
+  z-index: 1;
+}
+
+/* hover animation */
+.nav-home-btn:hover {
+  animation: nav-ani 8s linear infinite;
+}
+
+@keyframes nav-ani {
+  0% { background-position: 0%; }
+  100% { background-position: 400%; }
+}
+
+/* glow border */
+.nav-home-btn::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    #03a9f4,
+    #f441a5,
+    #ffeb3b,
+    #03a9f4
+  );
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+
+.nav-home-btn:hover::before {
+  filter: blur(16px);
+}
+/* =========================
+   HERO GLOW TEXT EFFECT
+   (Size-safe version)
+========================= */
+
+.hero-glow {
+  position: relative;
+  display: inline-block;
+  padding: 16px 24px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a 10%,
+    #020617 60%
+  );
+
+  background-size: 200% 200%;
+  animation: heroGradient 6s ease-in-out infinite;
+}
+
+/* Glow layers */
+.hero-glow::before,
+.hero-glow::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 22px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 0% 0%, #38bdf8, transparent 40%),
+    radial-gradient(circle at 100% 0%, #8b5cf6, transparent 40%),
+    radial-gradient(circle at 0% 100%, #ec4899, transparent 40%),
+    radial-gradient(circle at 100% 100%, #22d3ee, transparent 40%);
+}
+
+.hero-glow::before {
+  filter: blur(28px);
+  opacity: 0.55;
+  z-index: -2;
+  animation: heroGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-glow::after {
+  filter: blur(12px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+
+
+/* ROLE */
+.hero-role {
+  margin: 8px 0 12px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* DESCRIPTION */
+.hero-desc {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes heroGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes heroGlow {
+  to {
+    transform: scale(1.04);
+    opacity: 0.75;
+  }
+}
+
+@keyframes shine {
+  0% { background-position: 0; }
+  60% { background-position: 200px; }
+  100% { background-position: 200px; }
+}
+
+/* =========================
+   SAME LOOK – ONLY ANIMATION
+========================= */
+
+.glow-wrap {
+  position: relative;
+  padding: 30px;
+  border-radius: 18px;
+  background: inherit; /* 👈 KEEP ORIGINAL COLOR */
+}
+
+/* subtle animated glow using CURRENT COLORS */
+.glow-wrap::before,
+.glow-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 22px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.glow-wrap::before {
+  background: radial-gradient(
+    circle at top left,
+    rgba(56,189,248,0.4),
+    transparent 60%
+  );
+}
+
+.glow-wrap::after {
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(139,92,246,0.4),
+    transparent 60%
+  );
+  filter: blur(22px);
+  animation: glow-pulse 3s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+/* animation ONLY */
+@keyframes glow-pulse {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+/* center helper */
+.glow-wrap.center {
+  text-align: center;
+}
+/* ===== CERTIFICATIONS LAYOUT ===== */
+
+.certifications-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* HEADER CARD */
+.cert-header-card {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 140px;
+  background: linear-gradient(135deg, #0b2a3d, #061826);
+  border-radius: 20px;
+  text-align: center;
+  padding: 35px 20px;
+  margin-bottom: 60px;
+}
+
+.cert-header-card h2 {
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+/* CARD */
+.cert-card {
+  background: linear-gradient(135deg, #0b2a3d, #061826);
+  border-radius: 24px;
+  padding: 40px;
+  min-height: 420px; /* 🔥 UNIFORM HEIGHT */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* HEADINGS */
+.cert-card h3 {
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+/* SUBTITLE */
+.cert-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+/* LIST */
+.cert-card ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.cert-card ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* FOOTER TEXT */
+.cert-footer {
+  margin-top: auto; /* 🔥 PUSHES TO BOTTOM */
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.85;
+}
+/* =========================
+   GLOBAL TEXT COLOR CONTROL
+========================= */
+
+body {
+  color: var(--text-main);
+}
+
+.hero-role {
+  color: var(--text-main);
+}
+
+.hero-desc {
+  color: var(--text-muted);
+}
+
+.feature-card {
+  color: var(--card-text);
+}
+
+.cert-card,
+.section {
+  color: var(--text-main);
+}
+
+.footer {
+  color: var(--text-muted);
+}
+/* =========================
+   LIGHT MODE – CARD STYLE
+========================= */
+
+body.light .light-card {
+  background: linear-gradient(
+    135deg,
+    #e0f2fe,
+    #ffffff
+  );
+  color: #020617;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+
+  border-radius: 22px;
+}
+body.light .hero-glow {
+  background: linear-gradient(
+    135deg,
+    #e0f2fe,
+    #ffffff
+  );
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  animation: none; /* stop neon animation in light mode */
+}
+
+body.light .hero-glow::before,
+body.light .hero-glow::after {
+  display: none; /* remove glow layers */
+}
+
+body.light .hero-name,
+body.light .hero-role,
+body.light .hero-desc {
+  color: #020617;
+}
+body.light .cert-header-card {
+  background: linear-gradient(
+    135deg,
+    #e0f2fe,
+    #ffffff
+  );
+  color: #020617;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+body.light .cert-header-card h2 {
+  color: #020617;
+}
+body.light .cert-card {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f1f5f9
+  );
+
+  color: #020617;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+}
+
+body.light .cert-card h3,
+body.light .cert-subtitle,
+body.light .cert-card ul li,
+body.light .cert-footer {
+  color: #020617;
+}
+/* =========================
+   THEME CARD ARCHITECTURE
+========================= */
+
+.section {
+  background: transparent;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.6); /* dark mode default */
+}
+
+body.light .card {
+  background: linear-gradient(135deg, #e0f2fe, #ffffff);
+}
+/* =========================
+   CARD TEXT SPACING CONTROL
+========================= */
+
+.card h1 {
+  margin-bottom: 1.2rem;
+}
+
+.card p {
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   SKILLS PAGE ONLY
+========================= */
+
+/* Grid layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 50px;
+}
+
+/* Skill card */
+.skill-card {
+  min-height: 260px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.95)
+  );
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.12),
+    inset 0 0 40px rgba(139, 92, 246, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 45px rgba(56, 189, 248, 0.35),
+    inset 0 0 60px rgba(139, 92, 246, 0.2);
+}
+
+/* Card titles */
+.skill-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+/* List reset */
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Bullet items */
+.skill-card li {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+  color: rgba(255, 255, 255, 0.85);
+  padding-left: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Custom bullet */
+.skill-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+  font-size: 18px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    min-height: auto;
+  }
+}
+/* =========================
+   SKILLS PAGE – THEME AWARE
+========================= */
+
+/* Grid layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 50px;
+}
+
+/* =========================
+   SKILL CARD (DARK MODE)
+========================= */
+.skill-card {
+  min-height: 260px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.7);
+  color: var(--text-main);
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.12);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 18px 40px rgba(56, 189, 248, 0.35);
+}
+
+/* Title */
+.skill-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: var(--text-main);
+}
+
+/* List */
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+  padding-left: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Bullet */
+.skill-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+  font-size: 18px;
+}
+
+/* =========================
+   SKILL CARD – LIGHT MODE
+========================= */
+body.light .skill-card {
+  background: linear-gradient(
+    135deg,
+    #e0f2fe,
+    #ffffff
+  );
+
+  color: #020617;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+}
+
+body.light .skill-card h3 {
+  color: #020617;
+}
+
+body.light .skill-card li {
+  color: #475569;
+}
+
+body.light .skill-card li::before {
+  color: #2563eb;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    min-height: auto;
+  }
+}
+/* =========================
+   UNIVERSAL CARD HOVER + GLOW
+========================= */
+
+.card-hover {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+}
+
+/* DARK MODE GLOW */
+.card-hover:hover {
+  box-shadow:
+    0 18px 40px rgba(56, 189, 248, 0.35),
+    0 0 30px rgba(139, 92, 246, 0.25);
+}
+
+/* LIGHT MODE GLOW */
+body.light .card-hover:hover {
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.12),
+    0 0 18px rgba(59,130,246,0.25);
+}
