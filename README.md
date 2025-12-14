@@ -29,4 +29,4 @@ AWS IAM – Secure access control
 Architecture:
 User → CloudFront (HTTPS) → S3
 # Live Demo
-https:// d1y6wx4jalkesz.cloudfront.net
+https://d1y6wx4jalkesz.cloudfront.net
